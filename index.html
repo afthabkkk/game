@@ -4,16 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+
     <title>ssc code</title>
+    <script>
+        function copyToClipboard(inputId) {
+            var textarea = document.getElementById(inputId);
+            textarea.select();
+            document.execCommand("copy");
+            
+        }
+    </script>
+    
 </head>
 <body>
  
     <style>
         button {
-            position: relative;
-            top: 40px;
+            position:absolute ;
+            margin-top:10px;
+            
             
         }
+    </style>
+    <style>
+        
     </style>
    
     
@@ -32,9 +47,10 @@
         }
     </style>
     <style>
-
+        
     
     </style>
+    
     <center>
     <h1>ssc<br/>
         (system software and compilers)
@@ -44,9 +60,7 @@
     program 1
    </strong><br/>
    
-    <textarea  >
-        <input type="text" id="myInput" value="Text to be copied">
-            <button onclick="copyToClipboard()">Copy</button>
+    <textarea id="myInput1" >
        
         %option noyywrap
         %{
@@ -131,11 +145,12 @@ extern yylval;
         }
     
     </textarea>
+    <button onclick="copyToClipboard('myInput1')">Copy</button>
     </center>
 
     <center>
        <strong> program 2</strong><br/>
-        <textarea>
+        <textarea id="myInput2">
             lex program:
 
             %option noyywrap
@@ -173,11 +188,12 @@ extern yylval;
                 }
 
         </textarea>
+        <button onclick="copyToClipboard('myInput2')">Copy</button>
 
     </center>
     <center>
             <strong>program3</strong><br/>
-            <textarea>
+            <textarea id="myInput3">
                
                 #include<stdlib.h>
                     #include<string.h>
@@ -294,10 +310,11 @@ extern yylval;
                             printf("\nInvalid string rejected\n"); 
                     }
             </textarea>
+            <button onclick="copyToClipboard('myInput3')">Copy</button>
         </center>
         <center>
         <strong>program4</strong><br/>
-            <textarea>
+            <textarea id="myInput4">
                 #include<stdio.h>
                     #include<string.h>
                     int k=0,z=0,i=0,j=0,c=0;
@@ -383,10 +400,11 @@ extern yylval;
                     }
 
                 </textarea>
+                <button onclick="copyToClipboard('myInput4')">Copy</button>
               </center>
               <center>
                 <strong>program5</strong><br/>
-                <textarea>
+                <textarea id="myInput5">
 
                     #include<stdio.h>
                         #include<stdlib.h>
@@ -434,6 +452,7 @@ extern yylval;
                             fclose(fp2);
                         }
                 </textarea>
+                <button onclick="copyToClipboard('myInput5')">Copy</button>
             </center>
 
 
